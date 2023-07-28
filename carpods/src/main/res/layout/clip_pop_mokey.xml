@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText,ContentDescription">
+
+    <RelativeLayout
+        android:id="@+id/lin_base"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:id="@+id/img_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:scaleType="fitXY"/>
+        <!--android:src="@drawable/img_bg_confirm"-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/re1"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="靠近开"
+                    android:layout_gravity="center_vertical"/>
+                <ImageView
+                    android:id="@+id/img_open"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="140dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/switch_on"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/re2"
+            android:layout_below="@+id/re1"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="离开锁"
+                    android:layout_gravity="center_vertical"/>
+                <ImageView
+                    android:id="@+id/img_close"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="140dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/switch_on"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/li1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_info"
+                style="@style/Single_line_text_trans"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/operating_hints"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/Single_line_text_trans"
+                android:layout_width="50dp"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:textColor="@color/black"
+                android:text="@string/cancle"
+                android:textAllCaps="false"
+                />
+
+            <ImageView
+                android:id="@+id/split_center_line"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:background="@color/background_top"
+                android:scaleType="fitXY"/>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/Single_line_text_trans"
+                android:layout_width="50dp"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

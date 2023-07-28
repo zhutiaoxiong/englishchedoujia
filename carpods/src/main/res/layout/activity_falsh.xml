@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <com.kulala.staticsview.image.smart.SmartImageView
+            android:id="@+id/image_flash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            />
+        <!--android:src="@drawable/img_start_flash"-->
+        <TextView
+            android:id="@+id/txt_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="正在下载更新..."
+            android:textColor="#FF3355"
+            android:textSize="18dp"
+            android:visibility="invisible" />
+        <RelativeLayout
+            android:id="@+id/layer_toast"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <RelativeLayout
+            android:id="@+id/layer_tips"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_centerInParent="true">
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="400dp"
+                    android:background="@drawable/bgst_round_white"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textSize="18dp"
+                    android:text="Service Terms and Privacy Protection Agreement"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t1"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16dp"
+                    android:text="Welcome to use the car pod digital car key and mobile phone to control the car!"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t2"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16dp"
+                    android:text="Before using our products and services, please read and understand the User Service Agreement and Privacy Policy."
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:id="@+id/t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t3"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16dp"
+                    android:text="We will strictly follow the above agreement to provide you with services and protect your information security. By clicking 'agree', you have read and agreed to all terms and can continue to use our products and services."
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/gray"/>
+                <Button
+                    android:id="@+id/b1"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btnst_round_red"
+                    android:text="agree with"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/t4"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16dp"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:id="@+id/t5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/b1"
+                    android:layout_marginTop="13dp"
+                    android:textSize="16dp"
+                    android:text="Disagree and exit the app"
+                   android:layout_centerHorizontal="true"
+                    android:textColor="@color/gray"/>
+        </RelativeLayout>
+</RelativeLayout>
