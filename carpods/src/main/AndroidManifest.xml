@@ -3,8 +3,8 @@
     xmlns:tool="http://schemas.android.com/tools"
     package="com.client.proj.carpods"
     android:installLocation="internalOnly"
-    android:versionCode="182"
-    android:versionName="5.9">
+    android:versionCode="184"
+    android:versionName="1.0">
 
     <!-- maxV:180630 -102 - 2.3.8.30 on post-->
 
