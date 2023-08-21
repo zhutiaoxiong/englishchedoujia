@@ -154,9 +154,9 @@ public class ActivityLendCarTemporary extends Activity implements OEventObject {
             Long msss = Long.valueOf(""+ms);
             if(msss < 60*60*1000L){
                 showTime= "<font color='#FF0000'>"+min+"</font>minute";
-            }else if(msss>=60*60*1000L&&msss<48*60*60*1000L){
+            }else if(msss>=60*60*1000L&&msss<24*60*60*1000L){
                 showTime= "<font color='#FF0000'>"+hour+"</font>hour"+ "<font color='#FF0000'>"+min+"</font>minute";;
-            }else if(msss>=48*60*60*1000L){
+            }else if(msss>=24*60*60*1000L){
                 showTime= "<font color='#FF0000'>"+day+"</font>day"+"<font color='#FF0000'>"+hour+"</font>hour"+ "<font color='#FF0000'>"+min+"</font>minute";;
             }
             String str="Currently, there are still temporary car loans left "+showTime;

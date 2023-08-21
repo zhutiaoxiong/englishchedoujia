@@ -39,7 +39,7 @@ android {
             android.applicationVariants.all {
                 variant ->
                 variant.outputs.all { output ->
-                    def releaseApkName ='carpods--'+ variant.productFlavors.get(0).getName() + versionName + '.apk'
+                    def releaseApkName ='english--'+ variant.productFlavors.get(0).getName() + versionName + '.apk'
                     outputFileName = releaseApkName
                 }
             }
