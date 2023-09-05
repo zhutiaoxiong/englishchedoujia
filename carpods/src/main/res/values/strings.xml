@@ -3,7 +3,7 @@
     <string name="language">language</string>
     <string name="app_state_recode_title">Recode</string>
     <string name="app_violation_title">Violation Check</string>
-    <string name="reg_digits">._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ#</string>
+    <string name="reg_digits">._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ#@</string>
     <string name="number_digits">.0123456789</string>
     <string name="app_name">Car Pod Digital Car Key</string>
     <string name="flag_info">Found</string>

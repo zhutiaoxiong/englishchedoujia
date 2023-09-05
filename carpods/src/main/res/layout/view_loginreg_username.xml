@@ -40,8 +40,7 @@
             android:gravity="left|center_vertical"
             android:hint="@string/please_enter_phone_number"
             android:digits="@string/reg_digits"
-            android:inputType="phone"
-            android:maxLength="11"
+            android:inputType="phone|textEmailAddress"
             android:singleLine="true"
             android:layout_marginLeft="9dp"
             android:layout_alignTop="@+id/img_gabage"
@@ -57,7 +56,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="5dp"
             android:scaleType="fitXY"
-            android:src="@drawable/delete_new"/>
+            android:src="@drawable/delete_white"/>
     </RelativeLayout>
     <Button
         android:id="@+id/btn_confirm"
