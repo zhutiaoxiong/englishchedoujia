@@ -49,15 +49,15 @@ public abstract class ActivityBase extends AppCompatActivity implements OEventOb
     protected void onResume() {
         isActive = true;
         super.onResume();
-        SharedPreferences settings = getSharedPreferences("carpods_client_database", Activity.MODE_PRIVATE);
-        if (settings != null) {
-            boolean keepScreenOn = settings.getBoolean(KEEP_SCREENON, true);
-            if (keepScreenOn) {
-                getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);//保持常亮
-            }else{
-                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);//保持常亮
-            }
-        }
+//        SharedPreferences settings = getSharedPreferences("carpods_client_database", Activity.MODE_PRIVATE);
+//        if (settings != null) {
+//            boolean keepScreenOn = settings.getBoolean(KEEP_SCREENON, true);
+//            if (keepScreenOn) {
+//                getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);//保持常亮
+//            }else{
+//                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);//保持常亮
+//            }
+//        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
