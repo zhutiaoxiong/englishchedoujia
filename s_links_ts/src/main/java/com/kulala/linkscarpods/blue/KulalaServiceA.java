@@ -177,7 +177,7 @@ public class KulalaServiceA extends Service {
         }
         KulalaServiceAThis = this;
         boolean isInited = BlueLinkControl.getInstance().init(this);
-        boolean isInitedB = BlueLinkControlLcdKey.getInstance().init(this);
+//        boolean isInitedB = BlueLinkControlLcdKey.getInstance().init(this);
         if (!isInited) {
             new Thread(new Runnable() {
                 @Override
@@ -652,9 +652,9 @@ public class KulalaServiceA extends Service {
                 if (ManagerCurrentCarStatus.getInstance().getCarStatus() != null) {
                     ManagerCurrentCarStatus.getInstance().setIsOn(infos[0]);
                 }
-                BlueLinkControlLcdKey.getInstance().getDataCar().isLock = infos[6];//门锁状态                0b: 开锁 1b: 上锁
-                BlueLinkControlLcdKey.getInstance().getDataCar().isTheft = infos[2] * 2 + infos[1];//防盗
-                BlueLinkControlLcdKey.getInstance().getDataCar().isON = infos[0];//ON开关状态            0b: OFF 1b: ON
+//                BlueLinkControlLcdKey.getInstance().getDataCar().isLock = infos[6];//门锁状态                0b: 开锁 1b: 上锁
+//                BlueLinkControlLcdKey.getInstance().getDataCar().isTheft = infos[2] * 2 + infos[1];//防盗
+//                BlueLinkControlLcdKey.getInstance().getDataCar().isON = infos[0];//ON开关状态            0b: OFF 1b: ON
             }
 //            if (BuildConfig.DEBUG) Log.e("------------", "KulalaServiceA.isInForground"+KulalaServiceA.isInForground );
 //            Intent broadcast = new Intent();
@@ -664,8 +664,8 @@ public class KulalaServiceA extends Service {
 //            broadcast.putExtra("data", data.data);
 //            broadcast.setPackage(MytoolsGetPackageName.getPackageNameMy());
 //            sendBroadcast(broadcast,MytoolsGetPackageName.getBroadCastPermision());
-            boolean isForground = isAppForeground(KulalaServiceAThis,"com.client.proj.carpods");
-            if (BuildConfig.DEBUG) Log.e("------------", "在前台吗" + isForground);
+//            boolean isForground = isAppForeground(KulalaServiceAThis,"com.client.proj.carpods");
+//            if (BuildConfig.DEBUG) Log.e("------------", "在前台吗" + isForground);
             Intent broadcast = new Intent();
             broadcast.setAction(ONDATARECEIVED);
             broadcast.putExtra("carId", BlueLinkControl.getInstance().getDataCar().carId);
@@ -679,16 +679,16 @@ public class KulalaServiceA extends Service {
             }
 
 //            sendBroadcast(broadcast);
-            if (!isForground) {
-                //                sendBroadcast(broadcast,MytoolsGetPackageName.getBroadCastPermision());
-                if (BuildConfig.DEBUG) Log.e("------------", "後臺同步数据");
-                //在后台直接获取车辆状态同步给液晶钥匙
-                if (data.dataType == 0x21) {
-                    ManagerCarStatus.setData0x21(data.data);
-                } else if (data.dataType == 0x22) {
-                    ManagerCarStatus.setData0x22(data.data);
-                }
-            }
+//            if (!isForground) {
+//                //                sendBroadcast(broadcast,MytoolsGetPackageName.getBroadCastPermision());
+//                if (BuildConfig.DEBUG) Log.e("------------", "後臺同步数据");
+//                //在后台直接获取车辆状态同步给液晶钥匙
+//                if (data.dataType == 0x21) {
+//                    ManagerCarStatus.setData0x21(data.data);
+//                } else if (data.dataType == 0x22) {
+//                    ManagerCarStatus.setData0x22(data.data);
+//                }
+//            }
         }
 
         @Override

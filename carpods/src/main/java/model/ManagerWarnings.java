@@ -126,6 +126,7 @@ public class ManagerWarnings {
                 return 0;//-1小0=1大,无0会有异常
             }
         });
+        moveingShowWarnings=warnings;
     }
 
     //清掉旧数据
@@ -155,7 +156,9 @@ public class ManagerWarnings {
         }
         moveingShowWarnings.add(war);
         war.isNew = true;
-        sort(moveingShowWarnings);
+        List<DataWarnings> cacheList=new ArrayList<>();
+        cacheList.addAll(moveingShowWarnings);
+        sort(cacheList);
     }
 
     //插入不重复数据

@@ -121,8 +121,6 @@ public class KulalaServiceC extends Service {
         LogMeLinks.e("<ServiceC>", "<<<<<onDestroy>>>>>>");
         unregisterReceiver(myReceiver);//不要发stop,会一直重复
         BlueLinkReciverServiceCToServiceA.getInstance().unRegReceiver();
-        Intent service = new Intent(this, KulalaServiceC.class);
-        startService(service);
         super.onDestroy();
     }
     // ==============================
