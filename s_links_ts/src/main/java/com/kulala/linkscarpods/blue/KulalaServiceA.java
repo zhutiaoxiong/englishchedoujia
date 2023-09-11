@@ -225,8 +225,6 @@ public class KulalaServiceA extends Service {
 //        OShakeBlueThreeTimes.getInstance().activityDestoryStopThis();
         OShakeBlueNoScreenOnOrOff.getInstance().activityDestoryStopThis();
         ServiceAHeartThread.getInstance().stopThread();
-        Intent service = new Intent(this, KulalaServiceA.class);
-        startService(service);
         super.onDestroy();
     }
 
